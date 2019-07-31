@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
 import resumeData from '../resumeData';
+import { Document, Page } from 'react-pdf';
+import { pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-export default  class Resume extends Component {
+// //test function for the resume pdf
+// export default  class Resume extends Component {
+//   onDocumentLoadSuccess = ({ numPages }) => {
+//     this.setState({ numPages });
+//   }
+// //end test function
+ 
+
+//Put the code below (commented out) under the <section id="resume"for pdf
+
+//<div /*begin test code for resume pdf, all in this div*/>
+//<Document 
+  //file="./somefile.pdf"
+  //onLoadSuccess={this.onDocumentLoadSuccess}
+//>
+//<Page pageNumber={pageNumber} />
+//</Document>
+//<p>Page {pageNumber} of {numPages}</p> 
+//</div>
+
   render() {
     return (
       <section id="resume">

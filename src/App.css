@@ -10,3 +10,10 @@ header {
   flex-direction: column;
   align-items: center;
 }
+
+/*Only relevant for the pdf, using 8.5 x 11 size scaling*/
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+  max-width: 100vw;
+  max-height: 141vw; 
+}
