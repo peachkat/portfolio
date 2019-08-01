@@ -1,0 +1,18 @@
+  //test function for the resume pdf
+  onDocumentLoadSuccess = ({ numPages }) => {
+    this.setState({ numPages });
+  }
+//end test function
+//put above code inside "export default class Resume...{"
+
+//
+//put below code right after "<section id="resume>"
+<div /*begin test code for resume pdf, all in this div*/>
+        <Document 
+          file="./somefile.pdf"
+          onLoadSuccess={this.onDocumentLoadSuccess}
+        >
+        <Page pageNumber={pageNumber} />
+        </Document>
+        <p>Page {pageNumber} of {numPages}</p> 
+        </div> 
